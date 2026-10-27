@@ -27,10 +27,16 @@ body {
   z-index: 100;
 }
 
+.main-logo {
+  width: 60px;
+  height: 60px;
+}
+
 .logo {
   font-size: 26px;
   font-weight: 700;
   color: #ff758c;
+  margin-left: -50px;
 }
 
 .logo span {
