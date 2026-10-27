@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sản Phẩm - AuraBeauty</title>
+  <title>Giỏ Hàng - Julieskin</title>
   <link rel="stylesheet" href="../Trang_chu/trangchu.css">
-  <link rel="stylesheet" href="sanpham.css">
+  <link rel="stylesheet" href="giohang.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navbar Navigation -->
   <header class="navbar">
+    <img class="main-logo" src="https://i.pinimg.com/736x/74/57/0c/74570cc04c3ec5bcf83d8bdb62e89318.jpg" alt="">
     <div class="logo">Julie<span>Skin</span></div>
     
     <nav class="nav-links">
       <a href="../Trang_chu/trangchu.html">Trang chủ</a>
-      <a href="sanpham.html" class="active">Sản phẩm</a>
+      <a href="../San_pham/sanpham.html">Sản phẩm</a>
       <a href="../Ve_chung_toi/vechungtoi.html">Về chúng tôi</a>
       <a href="../Lien_he/lienhe.html">Liên hệ</a>
     </nav>
@@ -28,30 +29,63 @@
 
     <div class="user-cart">
       <div id="auth-container"></div>
-      <a href="../Gio_hang/giohang.html" class="cart-btn">
+      <a href="giohang.html" class="cart-btn active">
         🛒 Giỏ hàng (<span id="cart-count">0</span>)
       </a>
     </div>
   </header>
 
-  <!-- Banner -->
+  <!-- Banner Trang Giỏ Hàng -->
   <section class="page-banner">
-    <h1>Tất Cả Sản Phẩm</h1>
-    <p>Khám phá trọn bộ mỹ phẩm chăm sóc da và trang điểm cao cấp từ AuraBeauty</p>
+    <h1>Giỏ Hàng Của Bạn</h1>
+    <p><a href="../Trang_chu/trangchu.html">Trang chủ</a> / <span>Giỏ hàng</span></p>
   </section>
 
-  <!-- Main Content -->
-  <main class="product-page-container">
-    <!-- Filter Tabs -->
-    <div class="filter-tabs">
-      <button class="tab-btn active" onclick="filterCategory('all', this)">Tất Cả</button>
-      <button class="tab-btn" onclick="filterCategory('skincare', this)">Chăm Sóc Da</button>
-      <button class="tab-btn" onclick="filterCategory('makeup', this)">Trang Điểm</button>
-      <button class="tab-btn" onclick="filterCategory('perfume', this)">Nước Hoa</button>
-    </div>
+  <!-- Main Cart Section -->
+  <main class="cart-container">
+    <div class="cart-content" id="cart-content">
+      <!-- Bảng danh sách sản phẩm -->
+      <div class="cart-table-wrapper">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>Đơn giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items-body">
+            <!-- Render từ giohang.js -->
+          </tbody>
+        </table>
+      </div>
 
-    <!-- Product Grid -->
-    <div class="product-grid" id="main-product-grid"></div>
+      <!-- Tóm tắt đơn hàng & Thanh toán -->
+      <div class="cart-summary-card">
+        <h3>Tóm Tắt Đơn Hàng</h3>
+        <div class="summary-line">
+          <span>Tạm tính:</span>
+          <span id="subtotal-price">0 đ</span>
+        </div>
+        <div class="summary-line">
+          <span>Phí vận chuyển:</span>
+          <span id="shipping-fee">Miễn phí</span>
+        </div>
+        <div class="promo-box">
+          <input type="text" placeholder="Nhập mã giảm giá...">
+          <button type="button">Áp dụng</button>
+        </div>
+        <hr class="summary-divider">
+        <div class="summary-line total-line">
+          <span>Tổng thanh toán:</span>
+          <strong id="total-price">0 đ</strong>
+        </div>
+        <button class="btn-checkout" onclick="checkout()">Tiến Hành Thanh Toán</button>
+        <a href="../San_pham/sanpham.html" class="btn-continue">← Tiếp tục mua sắm</a>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -61,39 +95,47 @@
         <div class="logo">Julie<span>Skin</span></div>
         <p class="footer-desc">JulieSkin là thương hiệu mỹ phẩm uy tín chuyên cung cấp các sản phẩm làm đẹp an toàn, chất lượng cao và thân thiện với môi trường.</p>
         <div class="social-links">
-          <a href="#">🌐</a><a href="#">📸</a><a href="#">📘</a>
+          <a href="#">🌐</a>
+          <a href="#">📸</a>
+          <a href="#">📘</a>
+          <a href="#">🎬</a>
         </div>
       </div>
+
       <div class="footer-col">
         <h3>Liên Kết Nhanh</h3>
         <ul>
           <li><a href="../Trang_chu/trangchu.html">Trang chủ</a></li>
-          <li><a href="sanpham.html">Sản phẩm</a></li>
+          <li><a href="../San_pham/sanpham.html">Sản phẩm</a></li>
           <li><a href="../Ve_chung_toi/vechungtoi.html">Về chúng tôi</a></li>
           <li><a href="../Lien_he/lienhe.html">Liên hệ</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h3>Chính Sách</h3>
         <ul>
           <li><a href="#">Chính sách bảo mật</a></li>
           <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
           <li><a href="#">Chính sách giao hàng</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h3>Thông Tin Liên Hệ</h3>
-        <p>📍 Địa chỉ: 123 Đường Nguyễn Huệ, Q.1, TP.HCM</p>
+        <p>📍 Địa chỉ: 123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
         <p>📞 Hotline: 1900 6789</p>
         <p>✉️ Email: support@julieskin.vn</p>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; 2026 JulieSkin. Tất cả quyền được bảo lưu.</p>
     </div>
   </footer>
 
-  <!-- Modals -->
+  <!-- Modal Đăng Nhập -->
   <div id="login-modal" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal('login-modal')">&times;</span>
@@ -106,6 +148,7 @@
     </div>
   </div>
 
+  <!-- Modal Đăng Ký -->
   <div id="register-modal" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal('register-modal')">&times;</span>
@@ -120,6 +163,6 @@
   </div>
 
   <script src="../Thanh_tim_kiem/thanhtimkiem.js"></script>
-  <script src="sanpham.js"></script>
+  <script src="giohang.js"></script>
 </body>
 </html>

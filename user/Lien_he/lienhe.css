@@ -1,8 +1,29 @@
-/* ==========================================
-   AURA BEAUTY - LIÊN HỆ (LIENHE.CSS)
-   ========================================== */
+
+.main-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff758c;
+  margin-left: -50px;
+}
+
+.nav-links {
+  padding: 0px 187px 0px 0px;
+}
+
+
 
 /* --- Banner trang liên hệ --- */
+
+.page-banner {
+  margin-left: 235px;
+  margin-top: 20px;
+}
+
 .contact-banner {
   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200') center/cover no-repeat;
   height: 240px;
