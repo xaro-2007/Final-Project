@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JulieSkin - Mỹ Phẩm Hiện Đại & Thuần Chay</title>
+  <link rel="stylesheet" href="trangchu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar Navigation -->
+  <header class="navbar">
+    <div class="logo">Julie<span>Skin</span></div>
+    
+    <nav class="nav-links">
+      <a href="trangchu.html" class="active">Trang chủ</a>
+      <a href="../San_pham/sanpham.html">Sản phẩm</a>
+      <a href="../Ve_chung_toi/vechungtoi.html">Về chúng tôi</a>
+      <a href="../Lien_he/lienhe.html">Liên hệ</a>
+    </nav>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Tìm mỹ phẩm...">
+      <div id="search-results" class="search-dropdown"></div>
+    </div>
+
+    <div class="user-cart">
+      <div id="auth-container"></div>
+      <a href="../Gio_hang/giohang.html" class="cart-btn">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge-hero">🌸 Bộ Sưu Tập Mới 2026</span>
+      <h1>Tôn Vinh Vẻ Đẹp Tự Nhiên</h1>
+      <p>Khám phá các dòng mỹ phẩm thuần chay, lành tính giúp làn da bạn luôn căng bóng và rạng rỡ.</p>
+      <div class="hero-buttons">
+        <a href="../San_pham/sanpham.html" class="btn-hero primary">Mua Ngay</a>
+        <a href="../Ve_chung_toi/vechungtoi.html" class="btn-hero secondary">Tìm Hiểu Thêm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Features / Commitments -->
+  <section class="features">
+    <div class="feature-item">
+      <div class="feature-icon">🚚</div>
+      <h3>Giao Hàng Miễn Phí</h3>
+      <p>Cho đơn hàng từ 500.000đ trên toàn quốc</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🌱</div>
+      <h3>100% Thuần Chay</h3>
+      <p>Không chứa hóa chất độc hại & không thử nghiệm trên động vật</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🛡️</div>
+      <h3>Cam Kết Chính Hãng</h3>
+      <p>Hoàn tiền 200% nếu phát hiện hàng giả</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🎧</div>
+      <h3>Hỗ Trợ 24/7</h3>
+      <p>Tư vấn chăm sóc da chuyên sâu miễn phí</p>
+    </div>
+  </section>
+
+  <!-- 2. Categories Section -->
+  <section class="categories-section">
+    <div class="section-title">
+      <h2>Danh Mục Nổi Bật</h2>
+      <p>Lựa chọn dòng sản phẩm phù hợp với nhu cầu làn da của bạn</p>
+    </div>
+    <div class="category-grid">
+      <div class="cat-card cat-1">
+        <div class="cat-overlay">
+          <h3>Chăm Sóc Da</h3>
+          <a href="../San_pham/sanpham.html">Xem thêm &rarr;</a>
+        </div>
+      </div>
+      <div class="cat-card cat-2">
+        <div class="cat-overlay">
+          <h3>Trang Điểm</h3>
+          <a href="../San_pham/sanpham.html">Xem thêm &rarr;</a>
+        </div>
+      </div>
+      <div class="cat-card cat-3">
+        <div class="cat-overlay">
+          <h3>Nước Hoa</h3>
+          <a href="../San_pham/sanpham.html">Xem thêm &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Products -->
+  <section class="featured-products">
+    <div class="section-title">
+      <h2>Sản Phẩm Bán Chạy</h2>
+      <p>Những sản phẩm được yêu thích nhất trong tháng này</p>
+    </div>
+    <div class="product-grid" id="home-featured-products">
+      <!-- Sản phẩm sẽ được hiển thị qua trangchu.js -->
+    </div>
+  </section>
+
+  <!-- 4. Promotion Banner -->
+  <section class="promo-banner">
+    <div class="promo-content">
+      <h2>Ưu Đãi Đặc Biệt Tháng Bảy</h2>
+      <p>Giảm ngay <strong>30%</strong> cho toàn bộ dòng sản phẩm Serum & Dưỡng Ẩm Cao Cấp</p>
+      <a href="../San_pham/sanpham.html" class="btn-promo">Nhận Ưu Đãi</a>
+    </div>
+  </section>
+
+  <!-- 5. Testimonials -->
+  <section class="testimonials">
+    <div class="section-title">
+      <h2>Khách Hàng Nói Gì</h2>
+      <p>Hàng ngàn phái đẹp đã tin tưởng và chọn JulieSkin</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Serum B5 dùng cực kỳ êm, da mình nhạy cảm nhưng dùng không hề bị kích ứng. Da căng bóng sau 2 tuần sử dụng!"</p>
+
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Son glossy lipstick có màu rất tự nhiên, môi luôn mềm mượt. Đóng gói hàng cực kỳ cẩn thận và giao nhanh."</p>
+
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Nước hoa Rose Elegance giữ mùi lâu, thơm nhẹ nhàng quyến rũ. Cảm ơn shop tư vấn rất nhiệt tình!"</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Beauty Blog Section -->
+  <section class="blog-section">
+    <div class="section-title">
+      <h2>Bí Quyết Làm Đẹp</h2>
+      <p>Cập nhật những kiến thức chăm sóc da mới nhất từ chuyên gia</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500" alt="Blog 1">
+        <div class="blog-info">
+          <span class="blog-date">15/07/2026</span>
+          <h3>5 Bước Quy Trình Skincare Chuẩn Dành Cho Da Dầu Mụn</h3>
+          <p>Khám phá quy trình chăm sóc da khoa học giúp kiềm dầu hiệu quả mà vẫn đủ ẩm...</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1512290900673-7002b54173b4?w=500" alt="Blog 2">
+        <div class="blog-info">
+          <span class="blog-date">10/07/2026</span>
+          <h3>Cách Chọn Màu Son Sáng Da Cho Từng Tông Da Khác Nhau</h3>
+          <p>Mẹo nhỏ giúp bạn lựa chọn sắc son phù hợp tôn lên làn da rạng rỡ của mình...</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500" alt="Blog 3">
+        <div class="blog-info">
+          <span class="blog-date">02/07/2026</span>
+          <h3>Tầm Quan Trọng Của Việc Dùng Kem Chống Nắng Hàng Ngày</h3>
+          <p>Tại sao kem chống nắng lại là vũ khí tối thượng chống lại lão hóa da?</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>Đăng Ký Nhận Bản Tin</h2>
+      <p>Nhận thông báo về voucher giảm giá 10% cho đơn hàng đầu tiên & các ưu đãi độc quyền.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="Nhập email của bạn..." required>
+        <button type="submit">Đăng Ký</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7. Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo">Julie<span>Skin</span></div>
+        <p class="footer-desc">JulieSkin là thương hiệu mỹ phẩm uy tín chuyên cung cấp các sản phẩm làm đẹp an toàn, chất lượng cao và thân thiện với môi trường.</p>
+        <div class="social-links">
+          <a href="#">🌐</a>
+          <a href="#">📸</a>
+          <a href="#">📘</a>
+          <a href="#">🎬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Liên Kết Nhanh</h3>
+        <ul>
+          <li><a href="trangchu.html">Trang chủ</a></li>
+          <li><a href="../San_pham/sanpham.html">Sản phẩm</a></li>
+          <li><a href="../Ve_chung_toi/vechungtoi.html">Về chúng tôi</a></li>
+          <li><a href="../Lien_he/lienhe.html">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Chính Sách</h3>
+        <ul>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Chính sách giao hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Thông Tin Liên Hệ</h3>
+        <p>📍 Địa chỉ: 123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</p>
+        <p>📞 Hotline: 1900 6789</p>
+        <p>✉️ Email: support@julieskin.vn</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 JulieSkin. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Đăng Nhập -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('login-modal')">&times;</span>
+      <h2>Đăng Nhập</h2>
+      <form onsubmit="handleLogin(event)">
+        <input type="email" id="login-email" placeholder="Email của bạn" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <button type="submit" class="btn-submit">Đăng nhập</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Đăng Ký -->
+  <div id="register-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('register-modal')">&times;</span>
+      <h2>Đăng Ký Tài Khoản</h2>
+      <form onsubmit="handleRegister(event)">
+        <input type="text" id="reg-name" placeholder="Họ và tên" required>
+        <input type="email" id="reg-email" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <button type="submit" class="btn-submit">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../Thanh_tim_kiem/thanhtimkiem.js"></script>
+  <script src="trangchu.js"></script>
+</body>
+</html>

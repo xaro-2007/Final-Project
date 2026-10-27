@@ -1,0 +1,50 @@
+.page-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200') center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.page-banner h1 { font-size: 38px; margin-bottom: 10px; }
+.page-banner p { font-size: 16px; opacity: 0.9; }
+
+.product-page-container {
+  padding: 50px 8%;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 8px 22px;
+  border: 1px solid #ff758c;
+  background: white;
+  color: #ff758c;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: #ff758c;
+  color: white;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.product-rating {
+  color: #ffb400;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
